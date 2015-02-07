@@ -29,6 +29,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/createEvent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
@@ -171,33 +180,30 @@
                             android:focusableInTouchMode="true"
                             android:elegantTextHeight="false" />
                     </LinearLayout>
-                </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/createEvent"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
 
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invite Friends"
+                            android:id="@+id/viewFriendList"
+                            android:layout_marginLeft="16dp" />
 
-
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submit Event!"
+                            android:id="@+id/submitEvent"
+                            android:layout_gravity="center_horizontal" />
                     </LinearLayout>
+                </LinearLayout>
 
             </FrameLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Invite Friends"
-                android:id="@+id/viewFriendList"
-                android:layout_marginLeft="16dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit Event!"
-                android:id="@+id/submitEvent"
-                android:layout_gravity="center_horizontal" />
         </LinearLayout>
     </TabHost>
 </RelativeLayout>

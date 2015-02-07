@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -51,6 +52,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Initialize things
+        initTabs();
+
+
         timeView = (TextView) findViewById(R.id.timeView);
         timeBtn = (Button) findViewById(R.id.timeBtn);
         timeBtn.setOnClickListener(new View.OnClickListener(){
@@ -71,6 +76,20 @@ public class MainActivity extends ActionBarActivity {
     //initialize variables
     private void initVariables(){
         //mDateTextView = (TextView) findViewById(R.id.timeView);
+    }
+    private void initTabs(){
+        TabHost tabhost = (TabHost) findViewById(R.id.tabHost);
+        tabhost.setup();
+        TabHost.TabSpec tabSpec = tabhost.newTabSpec("viewEvents");
+        tabSpec.setContent(R.id.viewEvents);
+        tabSpec.setIndicator("View Events");
+        tabhost.addTab(tabSpec);
+
+        tabSpec = tabhost.newTabSpec("createEvent");
+        tabSpec.setContent(R.id.createEvent);
+        tabSpec.setIndicator("Create Event");
+        tabhost.addTab(tabSpec);
+
     }
 
 
